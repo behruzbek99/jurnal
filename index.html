@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f6f7fb" />
+  <title>Campus — Talaba kabineti</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#overview" aria-label="Campus bosh sahifa">
+        <span class="brand-mark">c<span>.</span></span><span class="brand-name">campus<span class="brand-dot">.</span></span>
+      </a>
+      <div class="school-label">TALABA PORTALI</div>
+      <nav class="main-nav" aria-label="Asosiy menyu">
+        <button class="nav-item active" data-page="overview"><span class="nav-icon">▦</span><span>Umumiy ko‘rinish</span></button>
+        <button class="nav-item" data-page="schedule"><span class="nav-icon">▤</span><span>Dars jadvali</span><span class="nav-count">3</span></button>
+        <button class="nav-item" data-page="courses"><span class="nav-icon">▧</span><span>Kurslarim</span></button>
+        <button class="nav-item" data-page="attendance"><span class="nav-icon">◷</span><span>Davomat</span></button>
+        <button class="nav-item" data-page="payments"><span class="nav-icon">▱</span><span>To‘lovlar</span></button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="help-card"><div class="help-icon">✳</div><b>Yordam kerakmi?</b><p>Administrator bilan bog‘laning</p><button id="helpBtn">Yordam markazi <span>↗</span></button></div>
+        <button class="nav-item settings" data-page="settings"><span class="nav-icon">⚙</span><span>Sozlamalar</span></button>
+        <div class="sidebar-foot"><span class="status-dot"></span> Tizim ishlayapti <span class="version">v2.4.0</span></div>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="mobile-menu" id="menuBtn" aria-label="Menyuni ochish">☰</button>
+        <div class="breadcrumb"><span>Talaba kabineti</span><span class="crumb-sep">/</span><b id="crumb">Umumiy ko‘rinish</b></div>
+        <div class="top-actions">
+          <button class="icon-button language" id="languageBtn" title="Tilni tanlash">UZ <span>⌄</span></button>
+          <button class="icon-button notification" id="notifyBtn" aria-label="Bildirishnomalar">♧<i></i></button>
+          <div class="top-divider"></div>
+          <button class="user-menu" id="profileBtn"><span class="avatar">MA</span><span class="user-meta"><b>Madina Aliyeva</b><small>Talaba · B2 Intermediate</small></span><span class="chevron">⌄</span></button>
+        </div>
+      </header>
+
+      <div class="page-content" id="pageContent">
+        <section class="welcome-row">
+          <div><div class="eyebrow"><span class="sparkle">✦</span> 23 OKTABR, 2026 · PAYSHANBA</div><h1>Assalomu alaykum, Madina <span class="wave">👋</span></h1><p class="welcome-sub">Bugun yangi bilimlar sari yana bir qadam. Kuningiz xayrli o‘tsin!</p></div>
+          <button class="outline-button" id="downloadBtn"><span>↓</span> Hisobotni yuklab olish</button>
+        </section>
+
+        <section class="stats-grid" aria-label="O‘quv ko‘rsatkichlari">
+          <article class="stat-card"><div class="stat-top"><span class="stat-label">Davomat</span><span class="stat-icon icon-blue">◷</span></div><div class="stat-value">92<span class="unit">%</span></div><div class="stat-foot"><span class="trend up">↗ 4.5%</span><span> o‘tgan oyga nisbatan</span></div><div class="mini-bars"><i style="height:38%"></i><i style="height:54%"></i><i style="height:45%"></i><i style="height:70%"></i><i style="height:59%"></i><i style="height:83%"></i><i style="height:73%"></i><i class="bar-active" style="height:96%"></i></div></article>
+          <article class="stat-card"><div class="stat-top"><span class="stat-label">Joriy bosqich</span><span class="stat-icon icon-lilac">✳</span></div><div class="stat-value">B2 <span class="value-note">Intermediate</span></div><div class="stat-foot"><span class="neutral-pill">7-oy</span><span> · 12 oydan</span></div><div class="progress-track"><i style="width:62%"></i></div></article>
+          <article class="stat-card"><div class="stat-top"><span class="stat-label">O‘rtacha natija</span><span class="stat-icon icon-green">⌁</span></div><div class="stat-value">86<span class="unit">/100</span></div><div class="stat-foot"><span class="trend up">A’lo natija</span><span> · guruhda 4-o‘rin</span></div><div class="score-line"><span style="height:30%"></span><span style="height:44%"></span><span style="height:39%"></span><span style="height:63%"></span><span style="height:58%"></span><span style="height:77%"></span><span style="height:69%"></span><span style="height:92%"></span><span style="height:78%"></span><span style="height:100%"></span><span style="height:84%"></span><span class="score-current" style="height:94%"></span></div></article>
+          <article class="stat-card payment-stat"><div class="stat-top"><span class="stat-label">Keyingi to‘lov</span><span class="stat-icon icon-amber">＄</span></div><div class="stat-value money">1 250 000 <span class="unit">so‘m</span></div><div class="stat-foot"><span class="due-dot"></span><span> 5-noyabrgacha</span></div><button class="pay-link" data-page="payments">To‘lov ma’lumotlari <span>→</span></button></article>
+        </section>
+
+        <section class="content-grid">
+          <article class="panel schedule-panel">
+            <div class="panel-heading"><div><h2>Bugungi darslar</h2><p>23-oktabr, payshanba</p></div><button class="text-link" data-page="schedule">To‘liq jadval <span>→</span></button></div>
+            <div class="lesson-list">
+              <div class="lesson"><div class="lesson-time"><b>10:00</b><small>11:30</small></div><div class="lesson-rail"><i></i></div><div class="lesson-details"><div class="lesson-title-row"><h3>General English</h3><span class="live-tag"><i></i> HOZIR</span></div><p><span>◉</span> Speaking &amp; Listening <b>·</b> 204-xona</p><div class="teacher"><span class="teacher-avatar teacher-one">DK</span><span>Dilshod Karimov</span><span class="lesson-level">B2</span></div></div><button class="more-btn" aria-label="Dars amallari">···</button></div>
+              <div class="lesson"><div class="lesson-time"><b>14:00</b><small>15:30</small></div><div class="lesson-rail"><i class="rail-purple"></i></div><div class="lesson-details"><div class="lesson-title-row"><h3>Grammar Workshop</h3><span class="upcoming-tag">KEYINGI</span></div><p><span>◉</span> Conditionals &amp; Wishes <b>·</b> 108-xona</p><div class="teacher"><span class="teacher-avatar teacher-two">NS</span><span>Nigora Saidova</span><span class="lesson-level">B2</span></div></div><button class="more-btn" aria-label="Dars amallari">···</button></div>
+              <div class="lesson"><div class="lesson-time"><b>16:00</b><small>17:30</small></div><div class="lesson-rail"><i class="rail-green"></i></div><div class="lesson-details"><div class="lesson-title-row"><h3>Speaking Club</h3></div><p><span>◉</span> Open discussion <b>·</b> Lounge</p><div class="teacher"><span class="teacher-avatar teacher-three">FA</span><span>Farhod Akbarov</span><span class="lesson-level">B2</span></div></div><button class="more-btn" aria-label="Dars amallari">···</button></div>
+            </div>
+          </article>
+          <article class="panel activity-panel"><div class="panel-heading"><div><h2>So‘nggi faollik</h2><p>O‘quv jarayoningizdan lavhalar</p></div><button class="kebab" aria-label="Ko‘proq">···</button></div>
+            <div class="activity-list"><div class="activity-item"><span class="activity-icon activity-test">✓</span><div><b>Grammar quiz topshirildi</b><p>Present Perfect · Unit 6</p><small>Bugun, 09:42</small></div><span class="activity-score">18/20</span></div><div class="activity-item"><span class="activity-icon activity-book">▤</span><div><b>Uyga vazifa yuklandi</b><p>Essay: My ideal city</p><small>Kecha, 17:15</small></div></div><div class="activity-item"><span class="activity-icon activity-star">★</span><div><b>Yangi natija qayd etildi</b><p>Speaking assessment</p><small>21-oktabr, 14:30</small></div><span class="activity-score score-green">B2+</span></div></div>
+            <button class="activity-all" id="allActivityBtn">Barcha faollik <span>→</span></button>
+          </article>
+        </section>
+
+        <section class="bottom-grid"><article class="panel week-panel"><div class="panel-heading"><div><h2>Haftalik reja</h2><p>20 — 25-oktabr, 2026</p></div><div class="week-nav"><button id="prevWeek" aria-label="Oldingi hafta">‹</button><button id="nextWeek" aria-label="Keyingi hafta">›</button></div></div><div class="week-days"><div class="day"><small DUSHANBA</small><b>20</b><i></i></div><div class="day"><small>SESHANBA</small><b>21</b><i></i><i></i></div><div class="day"><small>CHORSHANBA</small><b>22</b><i></i></div><div class="day today"><small>PAYSHANBA</small><b>23</b><i></i><i></i><i></i></div><div class="day"><small>JUMA</small><b>24</b><i></i></div><div class="day"><small>SHANBA</small><b>25</b><i></i><i></i></div><div class="day"><small>YAKSHANBA</small><b>26</b><em>Dam olish</em></div></div></article><article class="quote-card"><div class="quote-mark">“</div><p>Har kuni ozgina o‘sish — vaqt o‘tib katta natijaga aylanadi.</p><div class="quote-foot"><span>HAFTANING ILHOMI</span><span>✦ ✦ ✦</span></div><div class="quote-orb orb-one"></div><div class="quote-orb orb-two"></div></article></section>
+        <footer class="footer"><span>© 2026 Campus Student Portal</span><span>Yordam <b>·</b> Maxfiylik <b>·</b> Foydalanish shartlari</span><span class="footer-live"><i></i> Oxirgi yangilanish: hozirgina</span></footer>
+      </div>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
